@@ -1,0 +1,12 @@
+{
+    "server": {
+        "port": "4300"
+    },
+    "greetings":{
+        "msg": "Hello from z-config!"
+    },
+    "api": {
+        "host": "localhost",
+        "port": 3100
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "server": {
+        "port": "3100"
+    },
+    "greetings":{
+        "msg": "Hello from z-config!"
+    },
+    "db": {
+        "schema": "webdb",
+        "username": "medzit",
+        "password": "paswrd2",
+        "host": "localhost",
+        "port": 3308,
+        "dialect": "mysql"
+    }
+}

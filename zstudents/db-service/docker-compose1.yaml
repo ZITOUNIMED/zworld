@@ -1,0 +1,25 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: zstudentsdb
+    restart: always
+    ports:
+      - "3307:3306/tcp"
+      - "33061:33060"
+    environment:
+      MYSQL_ROOT_PASSWORD: paswrd
+      MYSQL_DATABASE: webdb
+      MYSQL_USER: medzit
+      MYSQL_PASSWORD: paswrd2
+  web:
+    image: mzitounieducation/zstudents:1.6
+    container_name: zstudentsweb
+    restart: always
+    ports:
+      - "3000:3000/tcp"
+    depends_on:
+      - db
+    command: ["greetings.msg='hello from arguments'", "db.host=zstudentsdb", "db.port=3306"]
+    
